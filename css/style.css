@@ -1,0 +1,334 @@
+@import 'utility.css';
+body{
+    background-color: antiquewhite;
+    font-family: 'Poppins', sans-serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+:root{
+    --primary:#3DCFD3;
+    --DARK:#161616;
+    --pure:#FFFFFF;
+    --light:#F2F2F2;
+    --ternary:#898989;
+    --secondary:#070606;
+}
+header{
+    background: var(--DARK);
+    /* height: 800px; */
+    clip-path:polygon(0 0,100% 0,100% 100%,80% 85%,0 100%);
+}
+header nav .left a{
+    color: var(--pure);
+    text-decoration: none;
+    /* for text decoration se underluine remove */
+    margin-right: 2rem;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+header nav .left a:hover{
+    color: var(--primary);
+}
+header nav{
+    padding: 2rem 0;
+}
+header nav .branding{
+    margin-right: 3rem;
+}
+.container{
+    max-width: 1152px;
+    margin: 0 auto;
+    padding: 0 15px;
+    /* border: 0.2rem; */
+    /* box-sizing: border-box; */
+    /* in padding top bottom se 0 and left right se 15px */
+    /* height and width is the format */
+}
+.hero{
+    padding: 3rem 0;
+}
+.hero .left img{
+    width: 342px;
+    margin-left: 7rem;
+}
+.hero .right{
+    color: var(--pure);
+    margin-top: -7rem;
+}
+.hero .right h6{
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+.hero .right h1{
+    font-size: 4rem;
+    font-weight: 100;
+    /* for space between new lines are more so reduce its line space */
+    line-height: 1.2;
+    margin-bottom: 2rem;/*as space to paragraph */
+}
+.hero .right h1 span{
+    color: var(--primary);
+}
+.hero .right p{
+    line-height: 1.9;
+    margin-bottom: 2rem;
+}
+
+
+section.about{
+    padding: 6rem 0;
+}
+section.about .about-ki-img{
+    height: 450px;
+}
+section.about h1{
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+section.about h1 span{
+    color: var(--primary);
+}
+section.about h1:hover{
+    color: var(--primary);
+    
+}
+section.about h1 span:hover{
+    color: var(--DARK);
+    cursor: pointer;
+    text-transform: uppercase;
+    font-display:inherit;
+}
+section.about h3{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+section.about p{
+    font-family: 'Lato',sans-serif;
+    color: var(--ternary);
+    color: rgb(26, 26, 62);
+    line-height: 1.9rem;
+    margin-bottom: 2.8rem;
+    font-weight: 400;
+}
+section.about .social{
+    display: flex;
+    /* border-style: dashed; */
+}
+section.about .social a{
+    /* background: var(--light); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    margin-right: 2rem ;
+    /* border-radius: 50%; */
+}
+section.about .social a:hover{
+    background-color: var(--primary);
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+section.about .social a img{
+    width: 100%;
+    height: 100%;
+    padding: 0.1rem;
+}
+section.about .container{
+    /* border-width: 1rem; */
+    /* box-sizing: border-box; */
+    /* opacity: 0.5; */
+    background-color: var(--light) transparent ;
+    padding: 5% 5%;
+    background: linear-gradient(to right,rgb(250,235,215), rgb(200, 186, 84), rgba(255, 122, 89,1), rgba(255, 122, 89,0));
+    /* background: linear-gradient(to bottom,rgb(250,235,215), rgb(200, 186, 84), rgba(255, 122, 89,1), rgba(255, 122, 89,0)); */
+    clip-path:polygon(0 0,100% 0,100% 100%,80% 85%,0 100%);
+    clip-path: polygon(0 0,80% 5%,100% 0,100% 100%,20% 90%,0 100%);
+    /* border: 3px solid #161616; */
+}
+section.sevices .container{
+    background: var(--light) transparent;
+    background: linear-gradient(to top,rgb(250,235,215), rgb(200, 186, 84), rgba(255, 122, 89,1), rgba(255, 122, 89,0));
+}
+.section-heading{
+    background: var(--light);
+    color: var(--secondary);
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1rem;
+    line-height: 0.5rem;
+    padding-top: 4rem;
+}
+.section-heading span{
+    color: var(--primary);
+}
+.section-heading + p{ /*here + we do to jump from heading part to para part */
+    color: var(--ternary);
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 6rem;
+    text-align: center;
+}
+section.services{
+    background: var(--light);
+}
+section.services .card-wrapper{
+    margin-left: 7rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);/* 1fr 1fr 1fr */
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    box-sizing: border-box;
+    width: 900px;
+    grid-template-rows: 270px 270px;
+}
+section.services .card-wrapper .card{
+    background: var(--pure);
+    padding: 3rem 2rem;
+    padding-top: 4rem;
+    position: relative;
+    text-align: center;
+    margin-bottom: 3.5rem;
+    cursor: pointer;
+    /* parent ko relative dena hota hai jab absolute karte hai */
+}
+section.services .card-wrapper .card img{
+    position: absolute;
+    top: -2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+section.services .card-wrapper .card h2{
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+section.services .card-wrapper .card p{
+    color: var(--ternary);
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6rem;
+}
+section.services .card-wrapper .card:hover{
+    color: var(--pure);
+    background: var(--DARK);
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+section.freelancer{
+    /* justify-content: center; */
+    /* margin: 6rem 6rem; */
+    padding: 6rem;
+    padding-bottom: 14rem;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../images/camera.png);
+    color: var(--pure);
+    clip-path:polygon(0 0,100% 0,100% 100%,67% 80%,0 100%);
+}
+section.freelancer h1{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+section.freelancer p{
+    margin-bottom: 2rem;
+    font-family: 'Lato', sans-serif;
+}
+
+section.reviews {
+    background: var(--light);
+}
+section.reviews .slider .slide img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;/*isse yadi photo kahin se daba chauda lamba hua then adjust ho jaayegi khud se hi */
+    margin-bottom: 2rem;
+}
+section.reviews .slider .slide{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0 12rem;
+}
+section.reviews .slider .slide p{
+    font-family: 'Lato', sans-serif;
+    color: var(--ternary);
+    margin-bottom: 1rem;
+}
+section.reviews .slider .slide span{
+    font-size: 0.8rem;
+}
+section.reviews .slider-dots .dots{
+    list-style-type: none;
+    display: flex!important;
+    justify-content: center;
+}
+section.reviews .slider-dots{
+    margin-top: 3rem;
+}
+section.reviews .slider-dots button{
+    font-size: 0;
+    width: 8px;
+    height: 4px;
+    margin-right: 0.2rem;
+    border: none;
+    outline: none;
+    background: var(--ternary);
+    border-radius: 50px;
+    cursor: pointer;
+    margin-bottom: 10rem;
+
+}
+section.reviews .dots li.slick-active button{
+    background: var(--primary);
+    width: 30px;
+}
+
+section.work{
+    background: var(--light);
+}
+section.work .card-wrapper{
+    margin: auto ;
+    width: 100px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    /* object-fit: cover; */
+    /* flex-wrap: wrap; */
+    /* align-items: center; */
+    justify-content: center;
+    /* vertical-align: middle; */
+    /* column-gap: 0px; */
+    /* row-gap: 0px; */
+    grid-gap: 1rem;
+    
+    /* padding: 0rem 6rem ; */
+}
+section.work .card-wrapper .card img{
+    object-fit: cover;
+    height: 150px;
+    margin-left: 5px;
+    border-bottom: 1px solid black;
+}
+
+/* ab flexbox bahut use hoga so make a temporary utility class */
+/* for one line allignment */
